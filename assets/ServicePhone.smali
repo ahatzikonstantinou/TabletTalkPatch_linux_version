@@ -2002,6 +2002,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/apdroid/tabtalk/ServicePhone;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
+    #ahat: instatiate AcceptCallActivity
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/apdroid/tabtalk/AcceptCallActivity;
@@ -2015,7 +2016,8 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    
+    #ahat: end
+
     goto :goto_0
 .end method
 

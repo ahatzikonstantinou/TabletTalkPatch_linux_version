@@ -7,11 +7,11 @@ echo "apkfile: $apkfile.apk"
 
 java -jar -Duser.language=en apktool.jar -f d "$apkfile.apk"
 
-#test -d "$apkfile" || mkdir -p "$apkfile/smali/com/apdroid/tabtalk" && 
+#test -d "$apkfile" || mkdir -p "$apkfile/smali/com/apdroid/tabtalk" &&
 cp ./assets/AcceptCallActivity\$CallStateReceiver.smali "$apkfile/smali/com/apdroid/tabtalk/AcceptCallActivity\$CallStateReceiver.smali"
-#test -d "$apkfile" || mkdir -p "$apkfile/smali/com/apdroid/tabtalk" && 
+#test -d "$apkfile" || mkdir -p "$apkfile/smali/com/apdroid/tabtalk" &&
 cp ./assets/AcceptCallActivity.smali "$apkfile/smali/com/apdroid/tabtalk"
-#test -d "$apkfile" || mkdir -p "$apkfile/smali/com/apdroid/tabtalk" && 
+#test -d "$apkfile" || mkdir -p "$apkfile/smali/com/apdroid/tabtalk" &&
 cp ./assets/ServicePhone.smali "$apkfile/smali/com/apdroid/tabtalk"
 
 mv "$apkfile/AndroidManifest.xml" "$apkfile/AndroidManifest.original.xml"

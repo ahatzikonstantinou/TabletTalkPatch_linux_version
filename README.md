@@ -1,4 +1,4 @@
-# TabletTalk Patch - linux version (by ahat)
+# TabletTalk Patch - linux version
 These are the steps I followed to patch my Tablet Talk APK to work on android 7.0
 
 I basically adapted the work from https://github.com/freshollie/TabletTalkLollipopPatch but changed the method that actually answers the call as the solution was not working for my Samsung S6 edge+ (Nougat).
@@ -6,7 +6,7 @@ I basically adapted the work from https://github.com/freshollie/TabletTalkLollip
 Why
 ---
 
-In android 5.0 google changed the way answering the phone works. 
+In android 5.0 google changed the way answering the phone works.
 
 Tablet Talk is an app that allows you to answer the phone from a tablet, and has not been updated properly since 4.4.
 
@@ -67,7 +67,7 @@ The important code is in directory “assets”. However, file “ServicePhone.s
     move-exception v2
     throw v2
 ```
-    
+
 - At your pc (with the phone connected with a usb cable) run `adb shell` in a terminal.
     - Once you are in the adb shell run `su` (the SuperUser app must be installed in your phone), and in the dialog that pops up in your phone grant superuser permission to application adb.
     - In the adb shell run the following command `echo “service call phone #n#” > /data/answer_call`
